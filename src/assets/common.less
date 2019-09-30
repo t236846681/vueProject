@@ -1,0 +1,139 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
+body {
+  min-width: 320px;
+  max-width: 750px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: "Microsoft Yahei", SimSun;
+}
+p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+a{
+  -webkit-tap-highlight-color:transparent
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 0;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.ft15{
+  font-size: 15px;
+}
+.ft14{
+  font-size: 14px;
+}
+.content-box{
+  width: 90%;
+  margin: 0 auto;
+}
+.tab-list{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #e0e0e0;
+  &.-two{
+    li{
+      width: 50%;
+    }
+  }
+  &.-four{
+    li{
+      width: 25%;
+    }
+  }
+  li{
+    float: left;
+    &.-active a{
+      position: relative;
+      color:rgb(11,204,186);
+      &:after{
+        position: absolute;
+        left: 20%;
+        bottom: 0;
+        content:'';
+        display: block;
+        width: 60%;
+        height: 3px;
+        background:rgb(11,204,186);
+      }
+    }
+  }
+  a{
+    display: block;
+    width: 100%;
+    color: rgb(136,136,136);
+    text-align: center;
+  }
+}
+body.-gray{
+  background: #f7f7f7;
+}
+body.-gray1{
+  background: #f6f6f6;
+}
+//协议
+.protocol-wrap {
+  background-color: #fff;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  h1 {
+    font-size: 200%;
+    text-align: center;
+    font-weight: 700;
+    margin: .67em 0;
+  }
+  p{
+    margin: 15px 0;
+    padding: 0;
+  }
+  .w100{
+    width: 100%;
+  }
+  .tr{
+    text-align: right;
+  }
+  .tc{
+    text-align: center;
+  }
+  .mt30{
+    margin-top: 30px;
+  }
+}
+
+// 贷款超市
+.market-list .-rate{
+  strong{
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    line-height: 30px;
+  }
+}
