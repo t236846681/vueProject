@@ -181,7 +181,6 @@
             margin-right: 5px;
             width: 15px;
             height: 15px;
-            background: url('../../assets/images/act/download/icon1.png') no-repeat;
             background-size: cover;
         }
     }
@@ -189,7 +188,6 @@
         margin-top: 20px;
         &:before{
             content: '';
-            background: url('../../assets/images/act/download/icon2.png') no-repeat;
             background-size: cover;
         }
     }

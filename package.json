@@ -31,6 +31,7 @@
     "jsonp": "^0.2.1",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
+    "mockjs": "^1.0.1-beta3",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
     "postcss-loader": "^2.1.5",
     "precss": "^2.0.0",

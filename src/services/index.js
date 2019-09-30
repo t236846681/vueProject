@@ -48,6 +48,7 @@ export default {
             resolve(res)
         }
         else {
+            debugger;
             console.log(res.msg);
             // this.$toast(res.msg, {location: 'center'});
         }

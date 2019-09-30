@@ -5,6 +5,7 @@
             <!--注册成功{{id}}-->
         </h2>
         <span>{{userToken}}</span>
+        <span>{{userToken2}}</span>
         {{pageForm}}
         <div v-for="row in pageForm">
             <el-form :model="row">
@@ -31,6 +32,9 @@
         <el-button @click="linkTo">url</el-button>
         <el-button @click="reflashToken">刷新token</el-button>
         <el-button @click="showMsg">弹窗</el-button>
+
+        <el-button @click="getToken">获取token</el-button>
+
         <el-link type="primary" @click="linkTo">跳转</el-link>
 
         <el-table
@@ -76,6 +80,7 @@
 <script type="text/javascript">
     import vuex from '../../vuex/store.js';
     import { mapGetters, mapActions } from  'vuex';
+    import services from '../../services/index.js'
 
     export default {
         data() {
@@ -103,7 +108,8 @@
                     date: '2016-05-03',
                     name: '王小虎',
                     address: '上海市普陀区金沙江路 1516 弄'
-                }]
+                }],
+                userToken2: ''
             }
         },
         mounted() {
@@ -133,6 +139,21 @@
             },
             showMsg: function () {
                 this.$toast('hello world', {location: 'center'});
+            },
+            getToken: function () {
+                return new Promise((resolve, reject) => {
+                    services.post('/api/user/login').then(
+                        response => {
+                            debugger;
+                            this.userToken2 = response.data.data.token;
+                            resolve(response)
+                        }
+                    ).catch(
+                        reason => {
+                            reject(reason);
+                        }
+                    );
+                });
             }
         }
     }
@@ -183,7 +204,6 @@
             margin-right: 5px;
             width: 15px;
             height: 15px;
-            background: url('../../assets/images/act/download/icon1.png') no-repeat;
             background-size: cover;
         }
     }
@@ -191,7 +211,6 @@
         margin-top: 20px;
         &:before{
             content: '';
-            background: url('../../assets/images/act/download/icon2.png') no-repeat;
             background-size: cover;
         }
     }
