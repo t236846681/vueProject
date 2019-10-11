@@ -61,6 +61,12 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|jpeg)$/,
         loader: 'url-loader?limit=1'
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',    exclude: /node_modules/,      options: {
+          appendTsSuffixTo: [/\.vue$/],
+        }
       }
     ]
   },

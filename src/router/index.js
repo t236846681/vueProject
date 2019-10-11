@@ -21,7 +21,10 @@ const routes = [
     },
     {
         path: '/spa/login',
-        component: Login
+        component: Login,
+        meta: {
+            title: '注册'
+        }
     },
     {
         path: '/spa/test',
@@ -40,6 +43,9 @@ const router = new VueRouter({
 router.beforeEach(function (to, from, next) {
     // 开启进度条
     NProgress.start();
+    if(to.meta.title) {
+        document.title = to.meta.title;
+    }
     next();
 });
 router.afterEach(function (to, from, next) {

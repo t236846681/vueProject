@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "dom",
+      "es2016"
+    ],
+    "target": "es5",
+    // 这可以对 `this` 上的数据属性进行更严格的推断
+    "strict": true
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

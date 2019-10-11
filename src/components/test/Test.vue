@@ -144,7 +144,7 @@
                 return new Promise((resolve, reject) => {
                     services.post('/api/user/login').then(
                         response => {
-                            debugger;
+                            // debugger;
                             this.userToken2 = response.data.data.token;
                             resolve(response)
                         }
